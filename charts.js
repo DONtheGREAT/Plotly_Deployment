@@ -99,7 +99,7 @@ function buildCharts(sample) {
       mode: 'markers',
       marker: {
         size: values,
-        colorscale: "solar"
+        colorscale: "#solar"
       }
       }];
 
