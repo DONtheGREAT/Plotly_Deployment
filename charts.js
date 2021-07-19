@@ -100,7 +100,7 @@ function buildCharts(sample) {
       marker: {
         size: values,
         color: ids,
-        colorscale: "greens"
+        colorscale: "solar"
       }
       }];
 
