@@ -114,11 +114,11 @@ function buildCharts(sample) {
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
     
-      var metadata = data.metadata;
-      var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
-      var result = resultArray[0];
-      var washFreq = parseInt(result.wfreq);
-      console.log(washFreq);
+    var metadata = data.metadata;
+    var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
+    var resultWfreq = resultArray[0];
+    var washFreq = parseInt(resultWfreq.wfreq);
+    console.log(washFreq);
 
    
     
@@ -151,6 +151,6 @@ function buildCharts(sample) {
     }};
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot();
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout, {responsive:true});
   });
 }
